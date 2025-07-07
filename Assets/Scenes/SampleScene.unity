@@ -691,7 +691,7 @@ MonoBehaviour:
   NetworkConfig:
     ProtocolVersion: 0
     NetworkTransport: {fileID: 1124565251}
-    PlayerPrefab: {fileID: 3619916745912684657, guid: c961db74b93f3024cbea1c8443a739ad, type: 3}
+    PlayerPrefab: {fileID: 3619916745912684657, guid: 182c48f52dce01442b7d0c50c262e07f, type: 3}
     Prefabs:
       NetworkPrefabsLists:
       - {fileID: 11400000, guid: a42fde96a4abf5f40b347db7f469e425, type: 2}
@@ -775,6 +775,7 @@ GameObject:
   - component: {fileID: 1675107739}
   - component: {fileID: 1675107738}
   - component: {fileID: 1675107741}
+  - component: {fileID: 1675107742}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -846,7 +847,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1675107741}
+      - m_Target: {fileID: 1675107742}
         m_TargetAssemblyTypeName: JoinServer, Assembly-CSharp
         m_MethodName: Join
         m_Mode: 1
@@ -906,6 +907,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b40f4d5f70c73149b689c016fcda8f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1675107742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675107736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82f806e2e6095244ebe245fe969a2df7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
