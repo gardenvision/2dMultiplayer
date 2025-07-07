@@ -5,7 +5,9 @@ using UnityEngine.InputSystem;
 [CreateAssetMenu(fileName = "New InputReader", menuName = "Input/InputReader")]
 public class InputReader : ScriptableObject, Controls.IPlayerActions
 {
-    public event Action<bool> primaryFireEvent;
+    public event Action<bool> PrimaryFireEvent;
+    public event Action<Vector2> MovementEvent;
+
     private Controls controls;
 
     private void OnEnable()
@@ -24,6 +26,7 @@ public class InputReader : ScriptableObject, Controls.IPlayerActions
         if (context.performed)
         {
             Vector2 movementInput = context.ReadValue<Vector2>();
+            MovementEvent?.Invoke(movementInput);
             // Handle movement input here
             Debug.Log($"Movement Input: {movementInput}");
             
@@ -34,10 +37,10 @@ public class InputReader : ScriptableObject, Controls.IPlayerActions
     {
         if (context.performed)
         {
-            primaryFireEvent?.Invoke(true);
+            PrimaryFireEvent?.Invoke(true);
         } else if (context.canceled)
         {
-            primaryFireEvent?.Invoke(false);
+            PrimaryFireEvent?.Invoke(false);
         }
     }
 }
