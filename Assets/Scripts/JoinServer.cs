@@ -27,4 +27,6 @@ public class JoinServer : MonoBehaviour
     {
         Debug.Log($"Client {clientId} disconnected");
     }
+    
+    private void testeee(){}
 }
